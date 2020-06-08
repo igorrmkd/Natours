@@ -191,8 +191,7 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -212,6 +211,12 @@ body {
   /* x, y, blur value, color  */
 }
 
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
 .btn:active {
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
@@ -223,6 +228,11 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
+}
+
+.btn--white::after {
+  background-color: #fff;
+  /* color: #777; */
 }
 
 .btn::after {
@@ -237,17 +247,6 @@ body {
   z-index: -1;
   -webkit-transition: all .4s;
   transition: all .4s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-  /* color: #777; */
-}
-
-.btn:hover::after {
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-          transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
 }
 
 .btn--animated {
