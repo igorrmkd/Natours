@@ -394,14 +394,31 @@ body {
 
 .card__side {
   background-color: teal;
+  color: white;
+  font-size: 2rem;
   height: 50rem;
   -webkit-transition: all .8s;
   transition: all .8s;
 }
 
-.card:hover .card__side {
+.card__side--front {
+  background-color: teal;
+}
+
+.card__side--back {
+  background-color: navy;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.card:hover .card__side--front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 
 .header {
