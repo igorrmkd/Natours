@@ -391,15 +391,15 @@ body {
           perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
+  height: 50rem;
 }
 
 .card__side {
-  background-color: teal;
   color: white;
   font-size: 2rem;
   height: 50rem;
-  -webkit-transition: all .8s;
-  transition: all .8s;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
   position: absolute;
   top: 0;
   left: 0;
@@ -407,16 +407,23 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   /* hide tha back side of the card */
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
 .card__side--front {
-  background-color: teal;
+  background-color: #fff;
 }
 
 .card__side--back {
-  background-color: navy;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.card__side--back-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 
 .card:hover .card__side--front {
