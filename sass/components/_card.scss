@@ -1,6 +1,7 @@
 .card {
     perspective: 150rem;
     -moz-perspective: 150rem;
+    position: relative;
 
     &__side {
         background-color: teal;
@@ -8,6 +9,11 @@
         font-size: 2rem;
         height: 50rem;  
         transition: all .8s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden; /* hide tha back side of the card */ 
 
         &--front {
             background-color: teal;
