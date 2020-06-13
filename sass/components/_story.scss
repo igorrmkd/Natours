@@ -25,6 +25,9 @@
 
     &__img {
         height: 100%;
+        transform: translateX(-4rem) scale(1.4); // center the image
+        // backface-visibility: hidden;   //// fix for an eventual glitch... 
+        transition: all .5s;   // animate
     }
 
     &__text {
@@ -48,6 +51,11 @@
     &:hover &__caption {
         opacity: 1;
         transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1); /// zoom-out
+        filter: blur(3px) brightness(80%);
     }
 
 }
