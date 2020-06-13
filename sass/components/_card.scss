@@ -4,11 +4,11 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem; // fix the card perspective
+    height: 52rem; // fix the card perspective
 
     &__side {
        font-size: 2rem;
-        height: 50rem;  
+        height: 52rem;  
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -75,12 +75,34 @@
 
     &__heading-span {
         padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
 
         &--1 {
             background-image: linear-gradient(to right bottom, 
             rgba($color-secundary-light, .85), 
             rgba($color-secundary-dark, .85));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) { // select the li elements that are not last child
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+
+            }
+
         }
     }
     
