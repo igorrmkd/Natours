@@ -7,8 +7,7 @@
     height: 50rem; // fix the card perspective
 
     &__side {
-        color: white;
-        font-size: 2rem;
+       font-size: 2rem;
         height: 50rem;  
         transition: all .8s ease;
         position: absolute;
@@ -48,6 +47,8 @@
         background-size: cover;
         height: 23rem;
         background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0  100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0  100%);
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secundary-light, $color-secundary-dark), url(../img/nat-5.jpg);
@@ -57,6 +58,29 @@
         }
         &--3 {
             background-image: url(../img/nat-5.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-secundary-light, .85), 
+            rgba($color-secundary-dark, .85));
         }
     }
     
