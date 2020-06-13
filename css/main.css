@@ -618,6 +618,8 @@ body {
   opacity: 0;
   -webkit-transition: all .5s;
   transition: all .5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .story:hover .story__caption {
