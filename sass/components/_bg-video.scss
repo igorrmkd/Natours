@@ -6,4 +6,11 @@
     width: 100%;
     z-index: -1;
     opacity: .25;
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; // fit the video size in the section
+    }
 }
