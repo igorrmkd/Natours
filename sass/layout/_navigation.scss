@@ -25,6 +25,8 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
+
+        transform: scale(80);
     }
 
     &__nav {
@@ -37,14 +39,21 @@
     }
 
     &__list {
-        @include center-xy;
+        @include center-xy; // use the centering mixin
+        list-style: none; // remove the bullets
+        text-align: center;
     }
     
     &__item {
-        
+        margin: 1rem; // add space between the links
     }
 
     &__link {
-        
+        font-size: 3rem;
+        font-weight: 300;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+
     }
 }
