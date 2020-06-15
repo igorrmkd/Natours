@@ -56,6 +56,10 @@
         display: inline-block;
     }
 
+    &__radio-input {
+        display: none;
+    }
+
     &__radio-label {
         font-size: $default-font-size;
         cursor: pointer;
@@ -85,8 +89,11 @@
             top: 50%;
             transform: translate(-50%, -50%);   
             opacity: 0;
+            transition: opacity .2s;
         }
     }
 
-    // &__radio-input:checked 
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    } 
 }

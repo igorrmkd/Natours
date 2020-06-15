@@ -642,6 +642,10 @@ body {
   display: inline-block;
 }
 
+.form__radio-input {
+  display: none;
+}
+
 .form__radio-label {
   font-size: 1.6rem;
   cursor: pointer;
@@ -673,6 +677,12 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1;
 }
 
 .story {
