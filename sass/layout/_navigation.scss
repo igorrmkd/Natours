@@ -14,6 +14,7 @@
         top: 6rem;
         right: 6rem;
         z-index: 1010;
+        box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.1);
     }
 
     &__background {
@@ -25,23 +26,29 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
+        transition: transform .8s;
 
-        transform: scale(80);
+        // transform: scale(80);
     }
 
     &__nav {
         height: 100vh;
-        width: 100%;
+        // width: 100%;
         position: fixed;
         top: 0;
         right: 0;
         z-index: 1005;
+
+        opacity: 0; // hide the links
+        width: 0; // hide the links
+        transition: all .8s;
     }
 
     &__list {
         @include center-xy; // use the centering mixin
         list-style: none; // remove the bullets
         text-align: center;
+        width: 100%;
     }
     
     &__item {
@@ -75,4 +82,17 @@
             transform: translateX(1rem);
         }
     }
+
+    // check box trick, when the checkbox is checked.. select the background
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+
+    }
+    // check box trick, when the checkbox is checked.. select the nav
+    &__checkbox:checked ~ &__nav {
+        opacity: 1; // show the nav links
+        width: 100%; // show the nav links
+
+    }
+
 }
