@@ -1,19 +1,19 @@
 .navigation {
  
     &__checkbox {
-        
+       display: none; // hide the checkbox
     }
 
     &__button { // cover the background
         background-color: $color-white;
-        background-color: teal;
+        // background-color: teal;
         height: 7rem;
         width: 7rem;
         border-radius: 50%;
         position: fixed;
         top: 6rem;
         right: 6rem;
-        z-index: 1001;
+        z-index: 1010;
     }
 
     &__background {
@@ -28,11 +28,16 @@
     }
 
     &__nav {
-        
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1005;
     }
 
     &__list {
-        
+        @include center-xy;
     }
     
     &__item {
