@@ -132,6 +132,20 @@
         top: 1rem;
     }
 
+    // when the checkbox is checked, select the adjacent element -> button, and the buttons child element -> icon span(middle) line
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent; // remove the span(middle) line
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
 
 
 }
