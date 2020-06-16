@@ -26,7 +26,7 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
-        transition: transform .8s;
+        transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
 
         // transform: scale(80);
     }
@@ -41,7 +41,7 @@
 
         opacity: 0; // hide the links
         width: 0; // hide the links
-        transition: all .8s;
+        transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
 
     &__list {
