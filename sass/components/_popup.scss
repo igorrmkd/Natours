@@ -37,6 +37,12 @@
     &__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
+
+        column-count: 2; //separate the text in to 2 columns
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-dark-2; //separate the columns with a line
+        
+        hyphens: auto;
     }
 
 }
