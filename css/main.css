@@ -4,6 +4,16 @@
 800 - 1200px:    Tablet Landscape
 [1200-1800px]:   Our normal styles applies
 1800px + :       Big Desktop
+
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+
 */
 @-webkit-keyframes moveInLeft {
   0% {
@@ -122,9 +132,27 @@ html {
   /*  62.5% od 16px(1rem) = 10px */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   html {
     font-size: 50%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 90%;
   }
 }
 
