@@ -1,3 +1,10 @@
+/*  
+0 - 600px:       Phone
+600 - 800px:     Tablet Portrait
+800 - 1200px:    Tablet Landscape
+[1200-1800px]:   Our normal styles applies
+1800px + :       Big Desktop
+*/
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -18,7 +25,6 @@
             transform: translate(0);
   }
 }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -114,6 +120,12 @@ html {
   /* font-size: 10px; */
   font-size: 62.5%;
   /*  62.5% od 16px(1rem) = 10px */
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
