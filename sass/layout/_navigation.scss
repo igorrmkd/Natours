@@ -17,6 +17,15 @@
         box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.1);
         text-align: center;
         cursor: pointer;
+
+        @include respond(tab-port) { // width < 900px 
+            top: 4rem;
+            right: 4rem;
+        }
+        @include respond(phone) { // width < 900px 
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -31,6 +40,15 @@
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
 
         // transform: scale(80);
+
+        @include respond(tab-port) { // width < 900px  
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+        @include respond(phone) { // width < 900px 
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
